@@ -183,7 +183,7 @@
         })
     }
 
-    fetchFile("cncf/landscapeapp/HEAD/landscapes.yml")
+    fetchFile("smagithub2/landscapeapp/HEAD/landscapes.yml")
           .then(function(data) {
             const content = jsyaml.load(data);
             reportsIp = content.ip;

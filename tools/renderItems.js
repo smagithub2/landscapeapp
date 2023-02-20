@@ -22,7 +22,7 @@ async function main() {
   await fs.mkdir(path.resolve(distPath, 'data/items'), { recursive: true});
   await fs.mkdir(path.resolve(distPath, 'fullscreen'), { recursive: true});
 
-  if (settings.global.repo === 'cncf/landscape') {
+  if (settings.global.repo === 'smagithub2/landscape') {
     const summary = SummaryRenderer.render({items: expandSecondPathItems(projects)});
     await fs.writeFile(path.resolve(distPath, 'summary.html'), summary);
   }
@@ -124,7 +124,7 @@ async function main() {
          ga('send', 'pageview');
   `
   let ga4 = '';
-  if (settings.global.repo === 'cncf/landscape') {
+  if (settings.global.repo === 'smagithub2/landscape') {
     ga4 = `
       <!-- Google tag (gtag.js) -->
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-T6VMPWFRDW"></script>

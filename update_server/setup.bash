@@ -8,7 +8,7 @@ which git || (
 )
 
 echo '
-0 5 * * * root bash -l -c "rm -rf /landscapeapp || true; git clone https://github.com/cncf/landscapeapp /landscapeapp; cd /landscapeapp; bash landscapes.sh"
+0 5 * * * root bash -l -c "rm -rf /landscapeapp || true; git clone https://github.com/smagithub2/landscapeapp /landscapeapp; cd /landscapeapp; bash landscapes.sh"
 55 4 * * * root bash -l -c "sudo reboot"
 ' > /etc/cron.d/updater
 ls "landscapes.env" 2>/dev/null || (

@@ -329,7 +329,7 @@ EOSSH
       git config --global user.email "info@cncf.io"
       git config --global user.name "CNCF-bot"
       git remote rm github 2>/dev/null || true
-      git remote add github "git@github.com:cncf/landscapeapp.git"
+      git remote add github "git@github.com:smagithub2/landscapeapp.git"
       echo 1
       GIT_SSH_COMMAND='ssh -i ~/.ssh/bot3 -o IdentitiesOnly=yes' git fetch github
       echo 2

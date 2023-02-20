@@ -114,7 +114,7 @@ const runRemoteWithoutErrors = async function(command) {
 const makeRemoteBuildWithCache = async function() {
   await runLocalWithoutErrors(`
     rm -rf packageRemote || true
-    git clone -b deploy --single-branch https://github.com/cncf/landscapeapp packageRemote
+    git clone -b deploy --single-branch https://github.com/smagithub2/landscapeapp packageRemote
   `);
 
   //how to get a hash based on our files

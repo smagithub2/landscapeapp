@@ -15,7 +15,7 @@ landscapes:
     required: true
   - landscape:
     name: cncf
-    repo: cncf/landscape
+    repo: smagithub2/landscape
     hook: 5c1bd968fdd72a78a54bdcd1
     required: true
   - landscape:

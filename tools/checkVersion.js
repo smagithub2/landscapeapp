@@ -3,7 +3,7 @@ const axios = require('axios');
 module.exports.checkVersion = async function() {
   try {
     const { data:result } = await axios({
-      url: `https://api.github.com/repos/cncf/landscapeapp/branches/master`,
+      url: `https://api.github.com/repos/smagithub2/landscapeapp/branches/master`,
       headers: {'User-Agent': 'curl'}
     })
     const currentBranch = require('child_process').execSync(`git rev-parse --abbrev-ref HEAD`).toString().trim();
