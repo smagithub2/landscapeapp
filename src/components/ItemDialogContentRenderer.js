@@ -702,26 +702,7 @@ module.exports.render = function({settings, tweetsCount, itemInfo}) {
           </div>
         </div> ` : ''
       }
-      ${itemInfo.crunchbase ? `
-          <div class="product-property row">
-            <div class="product-property-name col col-20">Crunchbase</div>
-            <div class="product-property-value col col-80">
-              <a data-type=external target=_blank href="${itemInfo.crunchbase}">${shortenUrl(itemInfo.crunchbase)}</a>
-            </div>
-          </div> ` : ''
-      }
-      <div class="row">
-        <div class="col col-50">
-          ${ twitterElement }
-          ${ firstCommitDateElement }
-          ${ contributorsCountElement }
-        </div>
-        <div class="col col-50">
-          ${ latestTweetDateElement }
-          ${ latestCommitDateElement }
-          ${ releaseDateElement }
-        </div>
-      </div>
+
       ${specialDates}
       <div class="row">
         <div class="col col-50">
@@ -746,9 +727,6 @@ module.exports.render = function({settings, tweetsCount, itemInfo}) {
         ${renderChart(itemInfo)}
         ${renderParticipation(itemInfo)}
       </div>
-      ${ itemInfo.twitter ? `<div class="twitter-timeline">
-          <a class="twitter-timeline" aria-hidden="true" data-tweet-limit="5" href="${itemInfo.twitter}"></a>
-        </div>` : '' }
     </div>
   </div>`;
   return result;
