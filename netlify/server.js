@@ -128,6 +128,7 @@ async function build() {
     if (result.success) {
         currentPath = result.path;
         console.info(`${new Date().toISOString()} build result: ${result.success ? 'success' : 'failure'} `);
+        console.info(result.output);
     } else {
         lastOutput = result.output;
         console.info(`${new Date().toISOString()} build result: ${result.success ? 'success' : 'failure'} `);

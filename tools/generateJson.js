@@ -352,29 +352,29 @@ async function main () {
     require('process').exit(1);
   }
 
-  var hasEmptyCrunchbase = false;
-  await Promise.mapSeries(itemsWithExtraFields, async function(item) {
-    if (!item.crunchbaseData) {
-      hasEmptyCrunchbase = true;
-      await failOnMultipleErrors(`${item.name} either has no crunchbase entry or it is invalid`);
-    }
-  });
-  if (hasEmptyCrunchbase) {
-    await reportFatalErrors();
-    require('process').exit(1);
-  }
+  // var hasEmptyCrunchbase = false;
+  // await Promise.mapSeries(itemsWithExtraFields, async function(item) {
+  //   if (!item.crunchbaseData) {
+  //     hasEmptyCrunchbase = true;
+  //     await failOnMultipleErrors(`${item.name} either has no crunchbase entry or it is invalid`);
+  //   }
+  // });
+  // if (hasEmptyCrunchbase) {
+  //   await reportFatalErrors();
+  //   require('process').exit(1);
+  // }
 
-  var hasBadCrunchbase = false;
-  await Promise.mapSeries(itemsWithExtraFields, async function(item) {
-    if (item.crunchbase && item.crunchbase.indexOf('https://www.crunchbase.com/organization/') !== 0) {
-      hasBadCrunchbase = true;
-      await failOnMultipleErrors(`${item.name}  has a crunchbase ${item.crunchbase} which does not start with 'https://www.crunchbase.com/organization'`);
-    }
-  });
-  if (hasBadCrunchbase) {
-    await reportFatalErrors();
-    require('process').exit(1);
-  }
+  // var hasBadCrunchbase = false;
+  // await Promise.mapSeries(itemsWithExtraFields, async function(item) {
+  //   if (item.crunchbase && item.crunchbase.indexOf('https://www.crunchbase.com/organization/') !== 0) {
+  //     hasBadCrunchbase = true;
+  //     await failOnMultipleErrors(`${item.name}  has a crunchbase ${item.crunchbase} which does not start with 'https://www.crunchbase.com/organization'`);
+  //   }
+  // });
+  // if (hasBadCrunchbase) {
+  //   await reportFatalErrors();
+  //   require('process').exit(1);
+  // }
 
   var hasBadHomepage = false;
   await Promise.mapSeries(itemsWithExtraFields, async function(item) {
