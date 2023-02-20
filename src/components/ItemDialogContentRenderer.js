@@ -730,16 +730,6 @@ module.exports.render = function({settings, tweetsCount, itemInfo}) {
             </div>
           </div> ` : ''
       }
-      ${itemInfo.crunchbaseData && itemInfo.crunchbaseData.linkedin ? `
-          <div class="product-property row">
-            <div class="product-property-name col col-20">LinkedIn</div>
-            <div class="product-property-value col col-80">
-              <a data-type=external target=_blank href="${itemInfo.crunchbaseData.linkedin}">
-                ${shortenUrl(itemInfo.crunchbaseData.linkedin)}
-              </a>
-            </div>
-          </div> ` : ''
-      }
       <div class="row">
         <div class="col col-50">
           ${ twitterElement }
