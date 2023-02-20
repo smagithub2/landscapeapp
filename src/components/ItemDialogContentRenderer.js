@@ -413,26 +413,6 @@ module.exports.render = function({settings, tweetsCount, itemInfo}) {
     return `<span>${categoryMarkup} ${separator} ${subcategoryMarkup}</span>`;
   }
 
-  const twitterElement = itemInfo.twitter ? `
-    <div class="product-property row">
-      <div class="product-property-name col col-40">Twitter</div>
-      <div class="product-property-value col col-60">
-        <a data-type="external" target="_blank" href="${itemInfo.twitter}">${h(formatTwitter(itemInfo.twitter))}</a>
-      </div>
-   </div>
-  ` : '';
-
-  const latestTweetDateElement = itemInfo.twitter ? `
-    <div class="product-property row">
-      <div class="product-property-name col col-50">Latest Tweet</div>
-      <div class="product-property-value col col-50">
-        ${ itemInfo.latestTweetDate ? `
-          <a data-type="external" target="_blank" href="${h(itemInfo.twitter)}">${formatDate(itemInfo.latestTweetDate)}</a>
-        ` : ''}
-        </div>
-      </div>
-  ` : '';
-
   const firstCommitDateElement = itemInfo.firstCommitDate  ? `
     <div class="product-property row">
       <div class="product-property-name col col-40">First Commit</div>
