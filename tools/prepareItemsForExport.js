@@ -24,9 +24,6 @@ const fields = settings => [{
   label: 'Crunchbase URL',
   value: 'crunchbase'
 }, {
-  label: 'Market Cap',
-  value: 'yahoo_finance_data.market_cap'
-}, {
   label: 'Ticker',
   value: 'yahoo_finance_data.effective_ticker'
 }, {
