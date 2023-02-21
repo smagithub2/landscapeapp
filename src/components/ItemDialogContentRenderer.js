@@ -444,14 +444,7 @@ module.exports.render = function({settings, tweetsCount, itemInfo}) {
 
   const amountElement = !settings.global.hide_funding_and_market_cap && Number.isInteger(itemInfo.amount) ? `
     <div class="product-property row">
-      <div class="product-property-name col col-40">${itemInfo.amountKind === 'funding' ? 'Funding' : 'Market Cap'}</div>
-      ${  itemInfo.amountKind === 'funding' ? `
-          <div class="product-property-value tight-col col-60">
-            <a data-type="external" target=_blank href="${itemInfo.crunchbase + '#section-funding-rounds'}">
-              ${'$' + millify(itemInfo.amount)}
-            </a>
-          </div>` : ''
-      }
+
       ${ itemInfo.amountKind !== 'funding' ? `
               <div class="product-property-value tight-col col-60">
                 <a data-type="external" target=_blank href="https://finance.yahoo.com/quote/${itemInfo.yahoo_finance_data.effective_ticker}">
