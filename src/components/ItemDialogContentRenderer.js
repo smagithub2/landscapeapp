@@ -435,7 +435,7 @@ module.exports.render = function({settings, tweetsCount, itemInfo}) {
 
   const headquartersElement = itemInfo.headquarters && itemInfo.headquarters !== 'N/A' ? `
     <div class="product-property row">
-      <div class="product-property-name col col-40">Headquarters</div>
+      <div class="product-property-name col col-40">Headquarters11</div>
       <div class="product-property-value tight-col col-60">
         <a data-type="external" target=_blank href="${closeUrl({ grouping: 'headquarters', filters:{headquarters:itemInfo.headquarters}})}">${h(itemInfo.headquarters)}</a>
       </div>
@@ -454,7 +454,7 @@ module.exports.render = function({settings, tweetsCount, itemInfo}) {
       }
       </div>
   ` : '';
-
+  console.log('Development=======================');
   const tickerElement = itemInfo.ticker ? `
     <div class="product-property row">
       <div class="product-property-name col col-40">Ticker</div>
@@ -484,6 +484,12 @@ module.exports.render = function({settings, tweetsCount, itemInfo}) {
     </div>
   ` : '';
 
+  const crunchbaseEmployeesElement =  itemInfo.crunchbaseData && itemInfo.crunchbaseData.numEmployeesMin ? `
+    <div class="product-property row">
+      <div class="product-property-name col col-50">Headcount</div>
+      <div class="product-property-value col col-50">${formatNumber(itemInfo.crunchbaseData.numEmployeesMin)}-${formatNumber(itemInfo.crunchbaseData.numEmployeesMax)}</div>
+    </div>
+  ` : '';
 
   const specialDates = ( function() {
     let specialKeys = ['accepted', 'incubation', 'graduated', 'archived'];
