@@ -484,12 +484,6 @@ module.exports.render = function({settings, tweetsCount, itemInfo}) {
     </div>
   ` : '';
 
-  const crunchbaseEmployeesElement =  itemInfo.crunchbaseData && itemInfo.crunchbaseData.numEmployeesMin ? `
-    <div class="product-property row">
-      <div class="product-property-name col col-50">Headcount</div>
-      <div class="product-property-value col col-50">${formatNumber(itemInfo.crunchbaseData.numEmployeesMin)}-${formatNumber(itemInfo.crunchbaseData.numEmployeesMax)}</div>
-    </div>
-  ` : '';
 
   const specialDates = ( function() {
     let specialKeys = ['accepted', 'incubation', 'graduated', 'archived'];
